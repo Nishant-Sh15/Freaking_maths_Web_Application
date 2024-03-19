@@ -1,0 +1,190 @@
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+body::before{
+    content: '';
+    background-color: #001f34;
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+    opacity: 0.7;
+    z-index: -1;
+}
+.container{
+    width:100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+   
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+    color: white;
+    font-size: 6.5rem;
+}
+.score{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    display:none;
+}
+.instructions{
+    color: white;
+    width: 40vw;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+.start{ 
+    max-width: 100px;
+    text-align: center;
+    border: 9px solid white;
+    font-size: 3rem;
+    background-color: white;
+    font-family: "Creepster", system-ui;
+    border-radius: 10px;   
+    cursor: pointer;
+}
+
+
+.ques{
+    font-size: 9rem;
+    font-family: "Creepster", system-ui;
+    width: 60vw;
+    text-align: center;
+    display:none;
+    margin-bottom: 10vh;
+}
+
+.num1,.operator,.num2,.result{
+    display: inline-block;
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;    
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.ans{
+    display: none;
+    height: 200px;
+    position: relative;
+    bottom:50px;
+
+
+}
+
+.correct,.wrong{
+    
+    width: 10%;
+    min-width: 100px;
+    padding: 8px;
+    height: 25%;
+    display: inline-block;
+    border: 4px solid white;
+    border-radius: 10px;
+    background-color: white;  
+    margin: 0px 25px; 
+   
+    
+} 
+.GameOver
+{  
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   color: black;
+   background-color:white;
+   border: 3px solid black;
+   border-radius: 10px;
+   padding: 0px 15px;
+   font-size: 2.5rem;
+   display: none;
+
+}
+
+.clock{
+    height: 10px;
+    background-color: white;
+}
+.timer{
+    animation-name:timer  ;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes timer {
+    from{width:100vw;}
+    to{width: 0vw;}
+}
+
+.score{
+    font-size: 3rem;
+    color:white
+}
+
+@media (max-width :1250px){
+    .heading{
+        font-size: 100px;
+    }
+    .instructions{
+        font-size: 25px;
+        width: 60vw;
+    }
+    .start{
+        font-size: 2rem;
+    }
+    .ques{
+        font-size:5rem;
+        
+    }
+}
+
+@media(max-width:400px){
+    .heading{
+        font-size:80px;
+    }
+    .instructions{
+        font-size:25px;
+        width: 70vw;
+    }
+    .correct{
+        margin-right:8px;
+        padding: 0px 8px;
+        font-size: 7rem;
+    }
+    .wrong{
+        margin-left: 10px;
+        padding: 0px 14px;
+        font-size: 7rem;
+    }
+    .ques{
+        font-size:3rem;
+    }
+}
+
+
+@media(max-width:310px){
+    .heading{
+        font-size:60px;
+    }
+    .score{
+        font-size:40px;
+    }
+    .correct{
+        margin-right: 4px;
+        font-size:6rem;
+    }
+    .wrong{
+        margin-left:4px;
+        font-size:6rem;
+    }
+}
